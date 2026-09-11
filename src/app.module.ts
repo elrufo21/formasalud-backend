@@ -6,6 +6,7 @@ import { ExecuteModule } from './execute/execute.module';
 import { UsersModule } from './user/user.module';
 import { CourseModule } from './course/course.module';
 import { CertificateModule } from './certificate/certificate.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { CertificateModule } from './certificate/certificate.module';
     UsersModule,
     CourseModule,
     CertificateModule,
+    AuthModule,
   ],
 })
 export class AppModule {}

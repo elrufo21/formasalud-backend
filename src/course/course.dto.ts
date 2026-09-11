@@ -1,6 +1,6 @@
 export class CreateCourseDto {
-  title: string;
-  slug: string;
+  title!: string;
+  slug!: string;
   short_description?: string;
   description?: string;
   price?: number;

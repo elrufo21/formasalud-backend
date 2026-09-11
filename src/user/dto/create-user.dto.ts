@@ -6,9 +6,9 @@ export enum DocumentType {
 }
 
 export class CreateUserDto {
-  name: string;
-  last_name: string;
-  email: string;
+  name!: string;
+  last_name!: string;
+  email!: string;
   password?: string;
   phone?: string;
   document_type?: DocumentType;
