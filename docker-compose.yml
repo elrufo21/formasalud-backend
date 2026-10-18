@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: formasalud-backend:prod
+    container_name: backend-formasalud
+    restart: unless-stopped
+    env_file:
+      - .env.production
+    ports:
+      - "127.0.0.1:4000:4000"
+    volumes:
+      - ./uploads:/app/uploads
+    networks:
+      - database
+
+networks:
+  database:
+    external: true

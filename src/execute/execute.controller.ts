@@ -1,6 +1,7 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { ExecuteService } from './execute.service';
 import { DatabaseFunctionKey } from './execute.constants';
+import { Roles } from 'src/auth/auth.decorators';
 
 export class ExecuteDto {
   function: DatabaseFunctionKey;
@@ -10,6 +11,7 @@ export class ExecuteDto {
 }
 
 @Controller('execute')
+@Roles('admin')
 export class ExecuteController {
   constructor(private readonly executeService: ExecuteService) {}
 
